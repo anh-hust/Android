@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ProAQI</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="link">https://api.waqi.info/feed/here/?token=a371d994b74489020d2361991b5cf80a1743e425</string>
+</resources>

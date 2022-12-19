@@ -12,6 +12,26 @@ public class GroupInfo {
     private String groupTopic;
     private ArrayList<String> groupMembers = new ArrayList<>();
     private ArrayList<String> groupMembersID = new ArrayList<>();
+    private int numberOfItems;
+    private int numberOfCompletedItems;
+    public static String TOTAL_ITEMS = "itemCount";
+    public static String COMPLETED_ITEMS = "completedCount";
+
+    public int getNumberOfItems() {
+        return numberOfItems;
+    }
+
+    public void setNumberOfItems(int numberOfItems) {
+        this.numberOfItems = numberOfItems;
+    }
+
+    public int getNumberOfCompletedItems() {
+        return numberOfCompletedItems;
+    }
+
+    public void setNumberOfCompletedItems(int numberOfCompletedItems) {
+        this.numberOfCompletedItems = numberOfCompletedItems;
+    }
 
     /**
      * @FUNCTION: Constructor corresponding with each Navigation
@@ -25,7 +45,7 @@ public class GroupInfo {
 
     /**
      * @FUNCTION constructor
-     * */
+     */
     /* For Group Detail inside Group Information */
     public GroupInfo(String groupName, String groupImage, String groupTopic,
                      String[] groupMembers, String[] groupMembersID) {
@@ -45,6 +65,13 @@ public class GroupInfo {
         this.groupName = groupName;
         this.groupPassword = groupPassword;
         this.groupTopic = groupTopic;
+    }
+
+    /* For just Process Bar*/
+
+    public GroupInfo(int numberOfItems, int numberOfCompletedItems) {
+        this.numberOfItems = numberOfItems;
+        this.numberOfCompletedItems = numberOfCompletedItems;
     }
 
     /**

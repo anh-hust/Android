@@ -12,23 +12,25 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.ListFragment;
 
 import com.example.midterm.R;
+import com.example.midterm.adapter.GroupInfoArrayAdapter;
 import com.example.midterm.data.GroupInfo;
 import com.example.midterm.data.GroupData;
-import com.example.midterm.data.GroupInfoArrayAdapter;
 
 import java.util.List;
 
 /**
  * TODO Fragment View handler and pass data on CLick of List View
- * */
+ */
 
 public class GroupListFragment extends ListFragment {
-    private List<GroupInfo> groupIntroList = new GroupData().groupIntroArrayList();
+    private List<GroupInfo> groupIntroList;
     private groupListCallbacks groupListCallbacks;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        groupIntroList = new GroupData().groupIntroArrayList();
 
         /* Pass data and set adapter */
         GroupInfoArrayAdapter groupInfoArrayAdapter = new GroupInfoArrayAdapter(getActivity(),

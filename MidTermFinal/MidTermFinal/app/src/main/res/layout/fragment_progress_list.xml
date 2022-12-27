@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frag_progress"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".progress.ProgressFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="5sp"
+            android:backgroundTint="@color/unknown"
+            android:src="@drawable/back_icon" />
+
+        <TextView
+            android:id="@+id/groupTopic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp"
+            android:text="Group Topic"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="200sp"
+            android:layout_height="4dp"
+            android:layout_below="@+id/groupTopic"
+            android:layout_centerHorizontal="true"
+            android:background="@color/unknown" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewProgressList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/divider"
+            tools:listitem="@layout/item_progress_list" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addTaskFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20sp"
+            android:layout_marginBottom="20sp"
+            app:backgroundTint="@color/baby_blue"
+            app:fabCustomSize="50dp"
+            app:srcCompat="@drawable/add_task_icon"
+            app:tint="@color/white" />
+
+
+    </RelativeLayout>
+</FrameLayout>

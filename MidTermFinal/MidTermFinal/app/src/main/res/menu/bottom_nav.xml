@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/homeNav"
+            android:icon="@drawable/home_icon"
+            android:title="Home" />
+        <item
+            android:id="@+id/attendanceNav"
+            android:icon="@drawable/attendance_icon"
+            android:title="Attendance" />
+        <item
+            android:id="@+id/progressNav"
+            android:icon="@drawable/progress_icon"
+            android:title="Progress" />
+        <item
+            android:id="@+id/groupNav"
+            android:icon="@drawable/group_icon"
+            android:title="Group" />
+    </group>
+
+</menu>
